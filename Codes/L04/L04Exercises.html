@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L04 exercise </title>
+</head>
+<body>
+
+    <h1 id="title">welcome</h1>
+
+    <button onclick="showMessage()">Click me</button>
+    
+    <button onclick="changecolor()">Change Text color</button>
+    
+    <br><br>Name: <input id="name">
+    
+    <button onclick="Name()">Submit</button>
+
+    
+
+    <script>
+       
+
+        function showMessage(){
+            alert("welcome to C237")
+            document.getElementById("title").innerText="Hello Students"
+             
+        }
+
+        function changecolor(){
+            document.getElementById("title").style.color="blue"
+
+        }
+    
+
+    
+
+    
+       function Name(){
+            let name = document.getElementById("name").value
+            document.getElementById('title').innerText="Hello"+ " " + name
+        
+
+       }
+        
+         
+    </script>
+
+    
+</body>
+</html>

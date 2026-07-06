@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1> <b>Travel Pack list </b> </h1>
+    <table border="1">
+        <tr>
+            <th>clothes</th>
+            <th>toilteries</th>
+        </tr>
+        <tr>
+            <td>
+                <ol>
+                    <% for (let i=0; i<clothelist.length; i++){%>
+                        <li>
+                            <%= clothelist[i] %>
+                        </li>
+                        <% } %>
+                </ol>
+            </td>
+            <td>
+                <ul>
+                    <% for (let i=0; i<toiletrylist.length;i++){%>
+                        <li>
+                            <%=toiletrylist[i] %>
+                        </li>
+                        <% } %>
+                </ul>
+            </td>
+        </tr>
+        
+    </table>
+
+<form action="/add-item" method="POST">
+    <input type="text" name="item" placeholder="Enter item" required>
+
+    <select name="category">
+        <option value="clothe">Clothe</option>
+        <option value="toiletry">Toiletry</option>
+    </select>
+
+    <button type="submit">Add</button>
+</form>
+    
+</body>
+</html>
