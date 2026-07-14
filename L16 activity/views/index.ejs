@@ -40,9 +40,19 @@
         <% for (let i = 0; i < students.length; i++) { %>
           <tr>
             <td><%= students[i].name %></td>
-            <td><img src="<%= students[i].image %>" width="50"></td>
+            <td><img src="/images/<%= students[i].image %>" width="50"></td>
             <td><%= students[i].dob %></td>
             <td><%= students[i].contact %></td>
+            <td>
+    <a href="/editStudent/<%= students[i].studentId %>">Edit</a></td>
+       
+    
+
+    <td><a href="/deleteStudent/<%= students[i].studentId %>"
+       
+       onclick="return confirm('Are you sure you want to delete this student?')">
+       Delete</a></td>
+            
           </tr>
         <% } %>
       </tbody>
